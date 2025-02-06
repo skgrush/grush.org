@@ -1,7 +1,10 @@
+// nav>ul horizontal pattern
 ul {
   list-style: none;
   display: flex;
   flex-direction: row;
+
+  margin: 0;
 
   & > li {
 
@@ -15,3 +18,5 @@ ul {
     }
   }
 }
+
+

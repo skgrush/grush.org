@@ -7,13 +7,17 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'about',
+    path: 'About',
     loadComponent: () => import('./pages/about/about.component'),
     pathMatch: 'full',
   },
   {
     path: 'Lib',
     loadChildren: () => import('./pages/Lib/routes'),
+  },
+  {
+    path: 'App',
+    loadChildren: () => import('./pages/app/routes'),
   },
   {
     path: '**',
