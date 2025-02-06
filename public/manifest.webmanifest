@@ -9,17 +9,21 @@
   "start_url": "./",
   "icons": [
     {
-      "src": "assets/icons/fav/icon-192.png",
+      "src": "favicons/icon.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "favicons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/fav/icon-512.png",
+      "src": "favicons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/fav/icon-1024.png",
+      "src": "favicons/icon-1024x1024.png",
       "sizes": "1024x1024",
       "type": "image/png"
     }
