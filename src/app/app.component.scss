@@ -1,9 +1,12 @@
 $nav-row-height: 1.5lh;
 
 :host(grush-root) {
-  display: block;
+  display: grid;
   //background: var(--bg-color);
   min-height: 100dvh;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 header {

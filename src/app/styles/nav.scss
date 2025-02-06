@@ -1,22 +1,28 @@
-// nav>ul horizontal pattern
-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
 
-  margin: 0;
+@use './link';
 
-  & > li {
+@mixin nav() {
 
-    &:not(:last-child) {
+  // nav>ul horizontal pattern
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
 
-      &::after {
-        border-inline-start: 1px solid var(--txt-color);
-        margin-inline: 0.5em;
-        content: "";
+    margin: 0;
+
+    & > li {
+
+      &:not(:last-child) {
+
+        &::after {
+          border-inline-start: 1px solid var(--txt-color);
+          margin-inline: 0.5em;
+          content: "";
+        }
       }
     }
   }
-}
 
-@import './link';
+  @include link.link();
+}

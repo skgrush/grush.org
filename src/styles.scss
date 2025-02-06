@@ -8,6 +8,11 @@ body {
   overflow: hidden;
 }
 
+body {
+  overflow-y: auto;
+  height: 100dvh;
+}
+
 :root {
   --bg-color: #121212;
   --txt-color: #fff;

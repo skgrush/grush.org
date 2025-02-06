@@ -1,1 +1,3 @@
-@import '../../../styles/nav.scss';
+@use '../../../styles/nav';
+
+@include nav.nav();
