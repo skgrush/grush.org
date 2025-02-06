@@ -1,0 +1,14 @@
+{
+  "index.html": {
+    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=0"
+  },
+  "ngsw.json": {
+    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=0"
+  },
+  "github": {
+    "x-amz-website-redirect-location": "https://github.com/skgrush"
+  },
+  "manifest.webmanifest": {
+    "CacheControl": "public, proxy-revalidate, max-age=28800"
+  }
+}
