@@ -1,2 +1,13 @@
-Hello, World!
-<router-outlet/>
+<header>
+  <nav grush-navbar></nav>
+  <router-outlet name="nav"/>
+  <nav grush-contact-bar></nav>
+</header>
+<main>
+  <router-outlet/>
+</main>
+<footer>
+  @defer {
+    <grush-citations/>
+  }
+</footer>

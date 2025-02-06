@@ -1,14 +1,16 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ContactBarComponent } from './contact-bar/contact-bar.component';
+import { CitationsComponent } from './citations/citations.component';
 
 @Component({
   selector: 'grush-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavbarComponent, ContactBarComponent, CitationsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'grush.org';
 }
