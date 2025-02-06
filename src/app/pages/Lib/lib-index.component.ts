@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'grush-lib',
+  selector: 'grush-lib-index',
   imports: [],
-  templateUrl: './lib.component.html',
-  styleUrl: './lib.component.scss',
+  templateUrl: './lib-index.component.html',
+  styleUrl: './lib-index.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LibComponent {
+export class LibIndexComponent {
 
 }
 
-export default LibComponent;
+export default LibIndexComponent;

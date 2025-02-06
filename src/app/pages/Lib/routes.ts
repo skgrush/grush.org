@@ -17,7 +17,7 @@ const routes = [
         path: '',
         pathMatch: 'full',
         data: undefined,
-        loadComponent: () => import('./lib.component'),
+        loadComponent: () => import('./lib-index.component'),
       },
       {
         path: 'RecordCollections',
@@ -31,7 +31,7 @@ const routes = [
         data: undefined,
         redirectTo: '',
       },
-    ] as const satisfies Array<Route & { data?: ILibInfo }>,
+    ] as const satisfies Array<Route & { data: ILibInfo | undefined }>,
   }
 ] as const satisfies Routes;
 
