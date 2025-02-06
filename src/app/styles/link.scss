@@ -1,0 +1,9 @@
+a {
+  &[routerlinkactive] {
+    &.active-link {
+      text-decoration: dotted underline;
+      color: var(--txt-color);
+      cursor: default;
+    }
+  }
+}

@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'nav[grush-navbar]',
   imports: [
     RouterLink,
+    RouterLinkActive,
   ],
   templateUrl: './navbar.component.html',
   styleUrls: [

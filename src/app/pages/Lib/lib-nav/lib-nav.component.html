@@ -1,5 +1,5 @@
 <ul>
   @for (route of (routes$ | async); track route.path) {
-    <li><a [routerLink]="['/Lib', route.path]">{{ route.data!.libName }}</a></li>
+    <li><a [routerLink]="['/Lib', route.path]" routerLinkActive="active-link">{{ route.data!.libName }}</a></li>
   }
 </ul>

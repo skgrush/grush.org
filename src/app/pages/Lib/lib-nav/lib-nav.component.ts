@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { from, map } from 'rxjs';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
 
 @Component({
@@ -8,6 +8,7 @@ import { AsyncPipe } from '@angular/common';
   imports: [
     RouterLink,
     AsyncPipe,
+    RouterLinkActive,
   ],
   templateUrl: './lib-nav.component.html',
   styleUrls: [
