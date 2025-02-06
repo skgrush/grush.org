@@ -1,1 +1,17 @@
+$nav-row-height: 1.5lh;
 
+:host(grush-root) {
+  display: block;
+  //background: var(--bg-color);
+  min-height: 100dvh;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: $nav-row-height 0 $nav-row-height min-content;
+}
+
+nav[grush-contact-bar] {
+  grid-row: 4;
+}
