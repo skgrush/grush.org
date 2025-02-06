@@ -7,10 +7,7 @@ import { EmailAddressComponent } from './email-address/email-address.component';
     EmailAddressComponent,
   ],
   templateUrl: './contact-bar.component.html',
-  styleUrls: [
-    './contact-bar.component.scss',
-    '../styles/nav.scss'
-  ],
+  styleUrl: './contact-bar.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -11,10 +11,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     RouterLinkActive,
   ],
   templateUrl: './app-nav.component.html',
-  styleUrls: [
-    './app-nav.component.scss',
-    '../../../styles/nav.scss',
-  ],
+  styleUrl: './app-nav.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

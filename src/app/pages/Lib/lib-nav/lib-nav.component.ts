@@ -11,10 +11,7 @@ import { AsyncPipe } from '@angular/common';
     RouterLinkActive,
   ],
   templateUrl: './lib-nav.component.html',
-  styleUrls: [
-    './lib-nav.component.scss',
-    '../../../styles/nav.scss',
-  ],
+  styleUrl: './lib-nav.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -8,10 +8,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     RouterLinkActive,
   ],
   templateUrl: './navbar.component.html',
-  styleUrls: [
-    './navbar.component.scss',
-    '../styles/nav.scss',
-  ],
+  styleUrl: './navbar.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -1,17 +1,16 @@
 
-  :host {
-    display: inline-flex;
-    user-select: none;
+:host(grush-email-address) {
+  display: inline-flex;
+  user-select: none;
 
+  width: 0;
+  overflow: hidden;
 
+  //animation: 1s slide-in;
+  transition: width 1s ease-in-out;
+
+  &:host(.visible) {
+    width: calc(100% - 2lh);
   }
+}
 
-
-//@keyframes slider {
-//  from {
-//    width: 0;
-//  }
-//  to {
-//    width: fit-content;
-//  }
-//}

@@ -1,3 +1,4 @@
+@import '../styles/nav.scss';
 
 img.icon {
   aspect-ratio: 1 / 1;
@@ -9,14 +10,14 @@ img.icon {
   vertical-align: middle;
 }
 
-grush-email-address {
-  width: 0;
-  overflow: hidden;
-
-  //animation: 1s slide-in;
-  transition: width 1s ease-in-out;
-
-  &.visible {
-    width: calc(100% - 1lh);
-  }
-}
+//grush-email-address {
+//  width: 0;
+//  overflow: hidden;
+//
+//  //animation: 1s slide-in;
+//  transition: width 1s ease-in-out;
+//
+//  &.visible {
+//    width: calc(100% - 1lh);
+//  }
+//}
