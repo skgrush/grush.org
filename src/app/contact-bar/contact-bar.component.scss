@@ -4,6 +4,23 @@ img.icon {
   height: 1lh;
 }
 
+[role=button] {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+grush-email-address {
+  width: 0;
+  overflow: hidden;
+
+  //animation: 1s slide-in;
+  transition: width 1s ease-in-out;
+
+  &.visible {
+    width: calc(100% - 1lh);
+  }
+}
+
 //a#bsky-link {
 //  & > img {
 //

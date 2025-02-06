@@ -4,4 +4,12 @@
       <img class="icon" src="/media/bluesky_media_kit_logo_svgs.svg"/>
     </a>
   </li>
+  <li>
+    <i role="button" tabindex="0" (click)="toggleEmail()">
+      <img class="icon" src="/media/email-icon.svg"/>
+    </i>
+    @defer (when emailVisible()) {
+        <grush-email-address [class.visible]="emailVisible()" />
+    }
+  </li>
 </ul>

@@ -1,8 +1,11 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal, ViewEncapsulation } from '@angular/core';
+import { EmailAddressComponent } from './email-address/email-address.component';
 
 @Component({
   selector: 'nav[grush-contact-bar]',
-  imports: [],
+  imports: [
+    EmailAddressComponent,
+  ],
   templateUrl: './contact-bar.component.html',
   styleUrls: [
     './contact-bar.component.scss',
@@ -13,4 +16,9 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 })
 export class ContactBarComponent {
 
+  protected readonly emailVisible = signal(false);
+
+  protected toggleEmail() {
+    this.emailVisible.update(o => !o);
+  }
 }
