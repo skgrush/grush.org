@@ -20,7 +20,11 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/app/routes'),
   },
   {
+    path: 'error',
+    loadComponent: () => import('./pages/error/error.component'),
+  },
+  {
     path: '**',
-    redirectTo: '',
+    loadComponent: () => import('./pages/error/error.component'),
   }
 ];

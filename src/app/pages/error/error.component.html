@@ -1,0 +1,18 @@
+@if (pageInfo$ | async; as pageInfo) {
+  @if (!pageInfo.noBecause) {
+    <div class="real-error">
+      @if (pageInfo.amzType) {
+        <div>Error type: {{ pageInfo.amzType }}</div>
+      }
+      <div>{{ pageInfo.errorMessage }}</div>
+    </div>
+  } @else {
+    <div class="non-error">
+      Non-error: {{ pageInfo.noBecause }}
+    </div>
+  }
+} @else {
+  <div class="loading">
+    Loading...
+  </div>
+}
