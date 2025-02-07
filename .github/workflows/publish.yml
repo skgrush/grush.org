@@ -10,7 +10,7 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    env: grush.org
+    environment: grush.org
     steps:
       - uses: actions/checkout@v4
 
