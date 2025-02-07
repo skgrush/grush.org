@@ -10,7 +10,9 @@
   "icons": [
     {
       "src": "favicons/icon.svg",
-      "type": "image/svg+xml"
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
       "src": "favicons/icon-192x192.png",
