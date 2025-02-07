@@ -1,8 +1,11 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { TodoComponent } from '../../../todo/todo.component';
 
 @Component({
   selector: 'grush-cavern-seer',
-  imports: [],
+  imports: [
+    TodoComponent,
+  ],
   templateUrl: './cavern-seer.component.html',
   styleUrl: './cavern-seer.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,

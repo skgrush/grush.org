@@ -1,8 +1,11 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { TodoComponent } from '../../../todo/todo.component';
 
 @Component({
   selector: 'grush-record-collections',
-  imports: [],
+    imports: [
+        TodoComponent,
+    ],
   templateUrl: './record-collections.component.html',
   styleUrl: './record-collections.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
