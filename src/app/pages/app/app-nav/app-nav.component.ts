@@ -4,7 +4,7 @@ import { AsyncPipe } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'grush-app-nav',
+  selector: 'nav[grush-app-nav]',
   imports: [
     AsyncPipe,
     RouterLink,

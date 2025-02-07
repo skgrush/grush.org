@@ -3,26 +3,33 @@
 
 @mixin nav() {
 
-  // nav>ul horizontal pattern
-  ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+  :host(nav) {
+    overflow-x: auto;
 
-    margin: 0;
+    scrollbar-width: none;
 
-    & > li {
+    // nav>ul horizontal pattern
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
 
-      &:not(:last-child) {
+      margin: 0;
 
-        &::after {
-          border-inline-start: 1px solid var(--txt-color);
-          margin-inline: 0.5em;
-          content: "";
+      & > li {
+        white-space: nowrap;
+
+        &:not(:last-child) {
+
+          &::after {
+            border-inline-start: 1px solid var(--txt-color);
+            margin-inline: 0.5em;
+            content: "";
+          }
         }
       }
     }
-  }
 
-  @include link.link();
+    @include link.link();
+  }
 }

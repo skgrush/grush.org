@@ -7,14 +7,16 @@ $nav-row-height: 1.5lh;
 
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr min-content;
+
+  & > header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: $nav-row-height 0 $nav-row-height min-content;
+    overflow: hidden;
+
+    & > nav[grush-contact-bar] {
+      grid-row: 4;
+    }
+  }
 }
 
-header {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: $nav-row-height 0 $nav-row-height min-content;
-}
-
-nav[grush-contact-bar] {
-  grid-row: 4;
-}
