@@ -17,6 +17,10 @@ body {
   --bg-color: #121212;
   --txt-color: #fff;
 
+  --font-family: "Courier New", monospace;
+  --font-size-ui: 16px;
+  --font-size-text: 12px;
+
   color-scheme: dark;
   accent-color: #498c36;
 
@@ -24,3 +28,6 @@ body {
   background: var(--bg-color);
 }
 
+:root {
+  font: var(--font-size-text) var(--font-family);
+}

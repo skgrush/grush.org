@@ -1,8 +1,8 @@
 import {readFile, writeFile} from "node:fs/promises";
-import {join} from "node:path";
+import {join, resolve} from "node:path";
 
 /** @type string */
-const rootDir = import.meta.dirname;
+const rootDir = resolve(join(import.meta.dirname, '..'));
 
 const cacheControl ='public, must-revalidate, proxy-revalidate, max-age=120';
 

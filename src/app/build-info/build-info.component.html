@@ -1,0 +1,11 @@
+<span>Built with Angular v{{ version }}.</span>
+<span>
+  Build
+  @if (buildInfo.url) {
+    <a [href]="buildInfo.url" target="_blank">
+      {{buildInfo.workflow}}#{{buildInfo.workflowRunNumber}}
+    </a>
+  } @else {
+    {{buildInfo.workflow}}#{{buildInfo.workflowRunNumber}}
+  }
+</span>

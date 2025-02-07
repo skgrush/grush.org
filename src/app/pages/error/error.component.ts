@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, PLATFORM_ID, ViewEncapsulation } from '@angular/core';
 import { defer, from, map, NEVER, of, shareReplay } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { AsyncPipe, isPlatformServer } from '@angular/common';
+import { AsyncPipe, isPlatformServer, PlatformLocation } from '@angular/common';
 
 @Component({
   selector: 'grush-error',
@@ -16,6 +16,7 @@ import { AsyncPipe, isPlatformServer } from '@angular/common';
 export class ErrorComponent {
 
   readonly #isServer = isPlatformServer(inject(PLATFORM_ID));
+  readonly #location = inject(PlatformLocation);
   readonly #errorPathRe = /\/error(\/(index.html)?)?$/;
 
   static _hasSentRequest = false;
@@ -27,7 +28,7 @@ export class ErrorComponent {
     if (this.#isServer) {
       return NEVER;
     }
-    const pathname = globalThis.location.pathname;
+    const pathname = this.#location.pathname;
     if (this.#errorPathRe.test(pathname)) {
       return of({ noBecause: 'isErrorPage' } as const);
     }

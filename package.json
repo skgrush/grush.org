@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postbuild": "node ./add-static-routes.mjs",
+    "prebuild": "node ./scripts/build-info.mjs",
+    "postbuild": "node ./scripts/add-static-routes.mjs",
     "serve:ssr:grush.org": "node dist/grush.org/server/server.mjs",
     "migrate:cicd": "sync-s3 env.json",
     "migrate:local": "sync-s3 .env.json"
