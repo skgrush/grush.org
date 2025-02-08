@@ -1,20 +1,20 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { TodoComponent } from '../../../todo/todo.component';
 import { RepositoryComponent } from '../../../repository/repository.component';
+import { TodoComponent } from '../../../todo/todo.component';
 
 @Component({
-  selector: 'grush-cavern-seer-mapper',
+  selector: 'grush-this-site',
   imports: [
-    TodoComponent,
     RepositoryComponent,
+    TodoComponent,
   ],
-  templateUrl: './cavern-seer-mapper.component.html',
-  styleUrl: './cavern-seer-mapper.component.scss',
+  templateUrl: './this-site.component.html',
+  styleUrl: './this-site.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CavernSeerMapperComponent {
+export class ThisSiteComponent {
 
 }
 
-export default CavernSeerMapperComponent;
+export default ThisSiteComponent;

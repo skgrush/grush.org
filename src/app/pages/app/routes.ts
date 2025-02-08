@@ -20,6 +20,13 @@ const routes = [
         loadComponent: () => import('./app-index.component'),
       },
       {
+        path: 'Grush.org',
+        data: {
+          appName: 'Grush.org',
+        },
+        loadComponent: () => import('./this-site/this-site.component'),
+      },
+      {
         path: 'CavernSeer',
         data: {
           appName: 'CavernSeer',
@@ -39,6 +46,13 @@ const routes = [
           appName: 'What time is it in ...?'
         },
         loadComponent: () => import('./what-time-is-it-in/what-time-is-it-in.component'),
+      },
+      {
+        path: 'GUP',
+        data: {
+          appName: 'GUP',
+        },
+        loadComponent: () => import('./gup/gup.component'),
       }
     ] satisfies Array<Route & { data: undefined | IAppInfo }>
   }

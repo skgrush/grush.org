@@ -27,6 +27,20 @@ const routes = [
         loadComponent: () => import('./record-collections/record-collections.component'),
       },
       {
+        path: 'BPlist-and-NSKeyedUnarchiver',
+        data: {
+          libName: 'BPlist-and-NSKeyedUnarchiver',
+        },
+        loadComponent: () => import('./bpl-and-nsku/bpl-and-nsku.component')
+      },
+      {
+        path: 'VrmlParser',
+        data: {
+          libName: 'VrmlParser',
+        },
+        loadComponent: () => import('./vrml-parser/vrml-parser.component'),
+      },
+      {
         path: '**',
         data: undefined,
         redirectTo: '',

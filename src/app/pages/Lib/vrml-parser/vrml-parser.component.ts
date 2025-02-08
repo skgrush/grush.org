@@ -1,20 +1,18 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { TodoComponent } from '../../../todo/todo.component';
 import { RepositoryComponent } from '../../../repository/repository.component';
 
 @Component({
-  selector: 'grush-cavern-seer-mapper',
+  selector: 'grush-vrml-parser',
   imports: [
-    TodoComponent,
     RepositoryComponent,
   ],
-  templateUrl: './cavern-seer-mapper.component.html',
-  styleUrl: './cavern-seer-mapper.component.scss',
+  templateUrl: './vrml-parser.component.html',
+  styleUrl: './vrml-parser.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CavernSeerMapperComponent {
+export class VrmlParserComponent {
 
 }
 
-export default CavernSeerMapperComponent;
+export default VrmlParserComponent;
