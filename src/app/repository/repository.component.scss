@@ -25,6 +25,13 @@
     justify-content: space-around;
   }
 
+  .repo-badges, .repo-topics {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-gap: 1em;
+  }
+
   .badge {
     margin: 0.1em;
     display: inline-block;

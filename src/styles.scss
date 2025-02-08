@@ -28,7 +28,7 @@ body {
   background: var(--bg-color);
 }
 
-:root {
+:root, :host {
   font: var(--font-size-text) var(--font-family);
 
   *, *:before, *:after {

@@ -41,7 +41,7 @@ export class GithubService {
 
   readonly #isServer = isPlatformServer(inject(PLATFORM_ID));
 
-  readonly githubResults$ = timer(1.5e3).pipe(
+  readonly githubResults$ = of(undefined).pipe(
     switchMap(() =>
       this.#isServer
         ? of(undefined)
