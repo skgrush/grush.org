@@ -16,13 +16,14 @@ body {
 :root {
   --bg-color: #121212;
   --txt-color: #fff;
+  --accent-color: #498c36;
 
   --font-family: "Courier New", monospace;
   --font-size-ui: 16px;
   --font-size-text: 12px;
 
   color-scheme: dark;
-  accent-color: #498c36;
+  accent-color: var(--accent-color);
 
   color: var(--txt-color);
   background: var(--bg-color);
@@ -31,7 +32,7 @@ body {
 :root, :host {
   font: var(--font-size-text) var(--font-family);
 
-  *, *:before, *:after {
+  &, *, *:before, *:after {
     box-sizing: border-box;
   }
 }

@@ -1,8 +1,12 @@
+@use 'link';
+
 :host(grush-repository) {
 
   display: block;
   margin: 0.5em;
   padding: 0.5em;
+
+  @include link.link();
 
   #github-repo-icon {
     aspect-ratio: 1;

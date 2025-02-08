@@ -2,6 +2,17 @@
 @mixin link() {
 
   a {
+
+    &, &:visited {
+      color: var(--accent-color);;
+    }
+    &:hover {
+      color: deepskyblue;
+    }
+    &:active {
+      color: var(--txt-color);
+    }
+
     &[routerlinkactive] {
       &.active-link {
         text-decoration: dotted underline;
@@ -9,6 +20,8 @@
         cursor: default;
       }
     }
+
+
   }
 
 }

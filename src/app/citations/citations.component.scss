@@ -1,3 +1,7 @@
+@use 'link';
+
 :host(grush-citations) {
   display: block;
+
+  @include link.link();
 }
