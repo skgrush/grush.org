@@ -19,7 +19,7 @@ export class LibNavComponent {
 
   readonly routes$ = from(import('../routes')).pipe(
     map(({ default: routes }) => routes[1].children
-      .filter(route => !!route.data),
+      .filter((route): route is (typeof route & { title: string }) => 'title' in route && route.title && route.path !== ''),
     ),
   );
 }

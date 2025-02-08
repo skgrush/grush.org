@@ -1,9 +1,5 @@
 import { Route, Routes } from '@angular/router';
 
-export type ILibInfo = {
-  libName: string;
-};
-
 const routes = [
   {
     path: '',
@@ -16,28 +12,23 @@ const routes = [
       {
         path: '',
         pathMatch: 'full',
+        title: 'Libraries',
         data: undefined,
         loadComponent: () => import('./lib-index.component'),
       },
       {
         path: 'RecordCollections',
-        data: {
-          libName: 'RecordCollections',
-        },
+        title: 'RecordCollections',
         loadComponent: () => import('./record-collections/record-collections.component'),
       },
       {
         path: 'BPlist-and-NSKeyedUnarchiver',
-        data: {
-          libName: 'BPlist-and-NSKeyedUnarchiver',
-        },
+        title: 'BPlist-and-NSKeyedUnarchiver',
         loadComponent: () => import('./bpl-and-nsku/bpl-and-nsku.component')
       },
       {
         path: 'sync-s3',
-        data: {
-          libName: 'sync-s3',
-        },
+        title: 'sync-s3',
         loadComponent: () => import('./sync-s3/sync-s3.component'),
       },
       {
@@ -45,7 +36,7 @@ const routes = [
         data: undefined,
         redirectTo: '',
       },
-    ] as const satisfies Array<Route & { data: ILibInfo | undefined }>,
+    ] as const satisfies Routes,
   }
 ] as const satisfies Routes;
 

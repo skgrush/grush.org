@@ -10,6 +10,7 @@ export const routes: Routes = [
     path: 'About',
     loadComponent: () => import('./pages/about/about.component'),
     pathMatch: 'full',
+    title: 'About',
   },
   {
     path: 'Lib',

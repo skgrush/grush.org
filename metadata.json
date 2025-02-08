@@ -5,6 +5,9 @@
   "ngsw.json": {
     "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
   },
+  "favicons/icon.svg": {
+    "ContentType": "image/svg+xml"
+  },
   "github": {
     "x-amz-website-redirect-location": "https://github.com/skgrush"
   },

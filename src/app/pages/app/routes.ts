@@ -17,44 +17,35 @@ const routes = [
         path: '',
         pathMatch: 'full',
         data: undefined,
+        title: 'Apps',
         loadComponent: () => import('./app-index.component'),
       },
       {
         path: 'Grush.org',
-        data: {
-          appName: 'Grush.org',
-        },
+        title: 'Grush.org',
         loadComponent: () => import('./this-site/this-site.component'),
       },
       {
         path: 'CavernSeer',
-        data: {
-          appName: 'CavernSeer',
-        },
+        title: 'CavernSeer',
         loadComponent: () => import('./cavern-seer/cavern-seer.component'),
       },
       {
         path: 'CavernSeerMapper',
-        data: {
-          appName: 'CavernSeerMapper',
-        },
+        title: 'CavernSeerMapper',
         loadComponent: () => import('./cavern-seer-mapper/cavern-seer-mapper.component')
       },
       {
         path: 'What-time-is-it-in',
-        data: {
-          appName: 'What time is it in ...?'
-        },
+        title: 'What time is it in ...?',
         loadComponent: () => import('./what-time-is-it-in/what-time-is-it-in.component'),
       },
       {
         path: 'GUP',
-        data: {
-          appName: 'GUP',
-        },
+        title: 'GUP',
         loadComponent: () => import('./gup/gup.component'),
       }
-    ] satisfies Array<Route & { data: undefined | IAppInfo }>
+    ] satisfies Routes
   }
 ] as const satisfies Routes;
 
