@@ -9,18 +9,18 @@
     <span>Pushed <time [dateTime]="repoInfo.pushed_at" [title]="repoInfo.pushed_at">{{ repoInfo.pushed_at | date }}</time></span>
   </div>
   <div class="repo-badges">
-    @if (repoInfo.license; as license) {<span aria-label="Repo license" class="badge">{{ license.name }}</span>}
-    @if (repoInfo.language) {<span aria-label="Repo language" class="badge">{{ repoInfo.language }}</span>}
+    @if (repoInfo.license; as license) {<span aria-label="Repo license" class="badge"><grush-icon name="balance"/>{{ license.name }}</span>}
+    @if (repoInfo.language) {<span aria-label="Repo language" class="badge"><grush-icon name="language"/>{{ repoInfo.language }}</span>}
     @if (repoInfo.archived) {<span aria-label="Repo is archived" class="badge">Archived</span>}
     @if (repoInfo.disabled) {<span aria-label="Repo is disabled" class="badge">Disabled</span>}
-    @if (repoInfo.stars) {<span aria-label="Repo stars" class="badge">{{repoInfo.stars}}</span>}
-    @if (repoInfo.forks) {<span aria-label="Repo forks" class="badge">{{repoInfo.forks}}</span>}
-    @if (repoInfo.watchers) {<span aria-label="Repo watchers" class="badge">{{repoInfo.watchers}}</span>}
+    @if (repoInfo.stars) {<span aria-label="Repo stars" class="badge"><grush-icon name="star"/>{{repoInfo.stars}}</span>}
+    @if (repoInfo.forks) {<span aria-label="Repo forks" class="badge"><grush-icon name="fork_right"/>{{repoInfo.forks}}</span>}
+    @if (repoInfo.watchers) {<span aria-label="Repo watchers" class="badge"><grush-icon name="visibility"/>{{repoInfo.watchers}}</span>}
   </div>
   @if (repoInfo.topics) {
     <div class="repo-topics">
       @for (topic of repoInfo.topics; track topic) {
-        <span class="badge repo-topic">{{ topic }}</span>
+        <span class="badge repo-topic"><grush-icon name="label" />{{ topic }}</span>
       }
     </div>
   }

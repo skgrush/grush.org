@@ -2,9 +2,9 @@
 
 @include nav.nav();
 
-img.icon {
+.icon {
   aspect-ratio: 1 / 1;
-  height: 1lh;
+  vertical-align: middle;
 }
 
 [role=button] {

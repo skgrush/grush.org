@@ -28,5 +28,10 @@
   .badge {
     margin: 0.1em;
     display: inline-block;
+
+    & > grush-icon {
+      font-size: 1lh;
+      vertical-align: middle;
+    }
   }
 }
