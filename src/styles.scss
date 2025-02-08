@@ -30,4 +30,8 @@ body {
 
 :root {
   font: var(--font-size-text) var(--font-family);
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
 }
