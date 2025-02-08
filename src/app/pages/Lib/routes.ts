@@ -34,11 +34,11 @@ const routes = [
         loadComponent: () => import('./bpl-and-nsku/bpl-and-nsku.component')
       },
       {
-        path: 'VrmlParser',
+        path: 'sync-s3',
         data: {
-          libName: 'VrmlParser',
+          libName: 'sync-s3',
         },
-        loadComponent: () => import('./vrml-parser/vrml-parser.component'),
+        loadComponent: () => import('./sync-s3/sync-s3.component'),
       },
       {
         path: '**',

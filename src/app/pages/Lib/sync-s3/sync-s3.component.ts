@@ -1,18 +1,20 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { RepositoryComponent } from '../../../repository/repository.component';
+import { TodoComponent } from '../../../todo/todo.component';
 
 @Component({
-  selector: 'grush-vrml-parser',
+  selector: 'grush-sync-s3',
   imports: [
     RepositoryComponent,
+    TodoComponent,
   ],
-  templateUrl: './vrml-parser.component.html',
-  styleUrl: './vrml-parser.component.scss',
+  templateUrl: './sync-s3.component.html',
+  styleUrl: './sync-s3.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class VrmlParserComponent {
+export class SyncS3Component {
 
 }
 
-export default VrmlParserComponent;
+export default SyncS3Component;
