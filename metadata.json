@@ -34,5 +34,17 @@
   },
   "error/index.html": {
     "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
+  },
+  "App/GUP/index.html": {
+    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
+  },
+  "App/Grush.org/index.html": {
+    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
+  },
+  "Lib/BPlist-and-NSKeyedUnarchiver/index.html": {
+    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
+  },
+  "Lib/sync-s3/index.html": {
+    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
   }
 }
