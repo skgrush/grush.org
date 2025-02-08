@@ -1,0 +1,32 @@
+:host(grush-repository) {
+
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+
+  #github-repo-icon {
+    aspect-ratio: 1;
+    height: 1lh;
+    vertical-align: middle;
+  }
+
+  &, .badge {
+    border-radius: 0.32em;
+    border: 1px solid;
+  }
+
+  h2 {
+    all: unset;
+  }
+
+  [aria-label="Repo dates"] {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+  }
+
+  .badge {
+    margin: 0.1em;
+    display: inline-block;
+  }
+}
