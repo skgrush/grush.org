@@ -1,0 +1,15 @@
+@use 'link';
+
+:host(grush-cavern-seer) {
+  @include link.link();
+
+  img {
+    float: left;
+    border-radius: 22%;
+    margin: 1em;
+  }
+
+  grush-todo {
+    clear: left;
+  }
+}

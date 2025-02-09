@@ -1,0 +1,16 @@
+
+@use 'link';
+
+:host(cavern-seer-mapper) {
+  @include link.link();
+
+  img {
+    float: left;
+    border-radius: 22%;
+    margin: 1em;
+  }
+
+  grush-todo {
+    clear: left;
+  }
+}

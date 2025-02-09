@@ -1,0 +1,10 @@
+@use 'link';
+
+:host(grush-what-time-is-it-in) {
+  @include link.link();
+
+  img {
+    float: left;
+    margin: 1em;
+  }
+}
