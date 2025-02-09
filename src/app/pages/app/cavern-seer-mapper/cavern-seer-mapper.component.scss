@@ -1,7 +1,7 @@
 
 @use 'link';
 
-:host(cavern-seer-mapper) {
+:host(grush-cavern-seer-mapper) {
   @include link.link();
 
   img {
