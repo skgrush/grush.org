@@ -1,13 +1,11 @@
 
-@use 'link';
+@use 'shared-project-layout';
 
 :host(grush-cavern-seer-mapper) {
-  @include link.link();
+  @include shared-project-layout.shared-project-layout();
 
   img {
-    float: left;
     border-radius: 22%;
-    margin: 1em;
   }
 
   grush-todo {

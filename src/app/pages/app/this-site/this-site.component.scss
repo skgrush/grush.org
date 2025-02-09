@@ -1,7 +1,6 @@
+@use 'shared-project-layout';
 
 :host(grush-this-site) {
 
-  img {
-    float: left;
-  }
+  @include shared-project-layout.shared-project-layout();
 }

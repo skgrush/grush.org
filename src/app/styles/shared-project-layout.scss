@@ -1,0 +1,16 @@
+
+@use 'link';
+@use 'horizontal-hidden-scroll';
+
+@mixin shared-project-layout {
+  @include link.link();
+
+  h1 {
+    @include horizontal-hidden-scroll.horizontal-hidden-scroll();
+  }
+
+  img.favicon {
+    float: left;
+    margin: 1em;
+  }
+}
