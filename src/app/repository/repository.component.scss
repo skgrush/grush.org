@@ -14,13 +14,19 @@
     vertical-align: middle;
   }
 
+  border-radius: 1em;
   &, .badge {
-    border-radius: 0.32em;
     border: 1px solid;
   }
 
-  h2 {
+  h1, h2 {
     all: unset;
+    display: block;
+  }
+  h1 {
+    font-weight: bold;
+    font-size: var(--font-size-title);
+    padding-block-end: 0.5em;
   }
 
   [aria-label="Repo dates"] {
@@ -40,9 +46,13 @@
     margin: 0.1em;
     display: inline-block;
 
+    border-radius: 0.32em;
+
     & > grush-icon {
       font-size: 1lh;
       vertical-align: middle;
+      margin-inline-end: 0.3em;
+      padding-inline: 0.2em;
     }
   }
 }

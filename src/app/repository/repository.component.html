@@ -1,3 +1,4 @@
+<h1>Repository info</h1>
 @if (repoInfo$ | async; as repoInfo) {
   <h2>
     <img id="github-repo-icon" src="/media/github-mark-white.svg"/>
@@ -13,7 +14,7 @@
     @if (repoInfo.language) {<span aria-label="Repo language" class="badge"><grush-icon name="language"/>{{ repoInfo.language }}</span>}
     @if (repoInfo.archived) {<span aria-label="Repo is archived" class="badge">Archived</span>}
     @if (repoInfo.disabled) {<span aria-label="Repo is disabled" class="badge">Disabled</span>}
-    @if (repoInfo.stars) {<span aria-label="Repo stars" class="badge"><grush-icon name="star"/>{{repoInfo.stars}}</span>}
+    @if (repoInfo.stargazers_count) {<span aria-label="Repo stars" class="badge"><grush-icon name="star"/>{{repoInfo.stargazers_count}}</span>}
     @if (repoInfo.forks) {<span aria-label="Repo forks" class="badge"><grush-icon name="fork_right"/>{{repoInfo.forks}}</span>}
     @if (repoInfo.watchers) {<span aria-label="Repo watchers" class="badge"><grush-icon name="visibility"/>{{repoInfo.watchers}}</span>}
   </div>

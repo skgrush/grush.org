@@ -29,7 +29,7 @@ export type IGitHubRepo = {
   }
   topics: string[];
   watchers: string;
-  stars: number;
+  stargazers_count: number;
   forks: number;
   default_branch: string;
 };
