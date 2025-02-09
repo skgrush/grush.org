@@ -1,11 +1,11 @@
 
 @use 'link';
+@use 'horizontal-hidden-scroll';
 
 @mixin nav() {
 
   :host(nav) {
-    overflow-x: auto;
-    scrollbar-width: none;
+    @include horizontal-hidden-scroll.horizontal-hidden-scroll();
 
     // nav>ul horizontal pattern
     ul {

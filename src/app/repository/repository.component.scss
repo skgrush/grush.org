@@ -1,10 +1,12 @@
 @use 'link';
+@use 'horizontal-hidden-scroll';
 
 :host(grush-repository) {
 
   display: block;
   margin: 0.5em;
   padding: 0.5em;
+  overflow: hidden;
 
   @include link.link();
 
@@ -27,6 +29,9 @@
     font-weight: bold;
     font-size: var(--font-size-title);
     padding-block-end: 0.5em;
+  }
+  h2 {
+    @include horizontal-hidden-scroll.horizontal-hidden-scroll();
   }
 
   [aria-label="Repo dates"] {

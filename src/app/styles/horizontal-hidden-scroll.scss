@@ -1,0 +1,6 @@
+
+@mixin horizontal-hidden-scroll() {
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
