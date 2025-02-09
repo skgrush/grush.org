@@ -2,12 +2,15 @@
 
 @include nav.nav();
 
-.icon {
-  aspect-ratio: 1 / 1;
-  vertical-align: middle;
-}
+:host(grush-contact-bar) {
 
-[role=button] {
-  cursor: pointer;
-  vertical-align: middle;
+  .icon {
+    aspect-ratio: 1 / 1;
+    vertical-align: middle;
+  }
+
+  [role=button] {
+    cursor: pointer;
+    vertical-align: middle;
+  }
 }
