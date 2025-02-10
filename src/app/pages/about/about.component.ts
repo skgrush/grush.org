@@ -1,11 +1,8 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { TodoComponent } from '../../todo/todo.component';
 
 @Component({
   selector: 'grush-about',
-  imports: [
-    TodoComponent,
-  ],
+  imports: [],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
