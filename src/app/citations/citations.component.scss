@@ -1,6 +1,6 @@
 @use 'link';
 
-:host(grush-citations) {
+:host {
   display: block;
 
   @include link.link();

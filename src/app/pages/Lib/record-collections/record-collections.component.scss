@@ -1,5 +1,5 @@
 @use 'shared-project-layout';
 
-:host(grush-record-collections) {
+:host {
   @include shared-project-layout.shared-project-layout();
 }

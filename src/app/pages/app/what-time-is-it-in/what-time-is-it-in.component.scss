@@ -1,5 +1,5 @@
 @use 'shared-project-layout';
 
-:host(grush-what-time-is-it-in) {
+:host {
   @include shared-project-layout.shared-project-layout();
 }

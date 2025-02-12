@@ -1,6 +1,6 @@
 @use 'shared-project-layout';
 
-:host(grush-cavern-seer) {
+:host {
   @include shared-project-layout.shared-project-layout();
 
   grush-todo {

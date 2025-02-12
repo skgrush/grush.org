@@ -1,7 +1,7 @@
 
 @use 'shared-project-layout';
 
-:host(grush-cavern-seer-mapper) {
+:host {
   @include shared-project-layout.shared-project-layout();
 
   img {
