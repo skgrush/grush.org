@@ -5,7 +5,6 @@ import { ChangeDetectionStrategy, Component, input, ViewEncapsulation } from '@a
   imports: [],
   templateUrl: './icon.component.html',
   styleUrl: './icon.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconComponent {

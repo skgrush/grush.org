@@ -10,7 +10,6 @@ import { RepositoryComponent } from '../../../repository/repository.component';
   ],
   templateUrl: './what-time-is-it-in.component.html',
   styleUrl: './what-time-is-it-in.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WhatTimeIsItInComponent {

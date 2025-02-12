@@ -10,7 +10,6 @@ import { RepositoryComponent } from '../../../repository/repository.component';
   ],
   templateUrl: './cavern-seer.component.html',
   styleUrl: './cavern-seer.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CavernSeerComponent {

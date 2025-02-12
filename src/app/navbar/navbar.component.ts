@@ -9,7 +9,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent {

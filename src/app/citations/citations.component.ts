@@ -5,7 +5,6 @@ import { ChangeDetectionStrategy, Component, signal, ViewEncapsulation } from '@
   imports: [],
   templateUrl: './citations.component.html',
   styleUrl: './citations.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CitationsComponent {

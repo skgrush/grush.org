@@ -10,7 +10,6 @@ import { TodoComponent } from '../../../todo/todo.component';
   ],
   templateUrl: './this-site.component.html',
   styleUrl: './this-site.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThisSiteComponent {

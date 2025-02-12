@@ -12,7 +12,6 @@ import { AsyncPipe } from '@angular/common';
   ],
   templateUrl: './lib-nav.component.html',
   styleUrl: './lib-nav.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LibNavComponent {

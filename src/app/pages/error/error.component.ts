@@ -10,7 +10,6 @@ import { AsyncPipe, isPlatformServer, PlatformLocation } from '@angular/common';
   ],
   templateUrl: './error.component.html',
   styleUrl: './error.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ErrorComponent {

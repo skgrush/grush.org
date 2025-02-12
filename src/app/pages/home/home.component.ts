@@ -8,7 +8,6 @@ import { TodoComponent } from '../../todo/todo.component';
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {

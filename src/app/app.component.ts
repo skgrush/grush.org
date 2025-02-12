@@ -10,7 +10,6 @@ import { BuildInfoComponent } from './build-info/build-info.component';
   imports: [RouterOutlet, NavbarComponent, ContactBarComponent, CitationsComponent, BuildInfoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {

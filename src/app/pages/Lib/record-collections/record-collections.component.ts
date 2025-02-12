@@ -8,7 +8,6 @@ import { RepositoryComponent } from '../../../repository/repository.component';
   ],
   templateUrl: './record-collections.component.html',
   styleUrl: './record-collections.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RecordCollectionsComponent {

@@ -5,7 +5,6 @@ import { ChangeDetectionStrategy, Component, computed, input, ViewEncapsulation 
   imports: [],
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoComponent {

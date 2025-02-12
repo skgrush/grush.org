@@ -10,7 +10,6 @@ import { IconComponent } from '../icon/icon.component';
   ],
   templateUrl: './contact-bar.component.html',
   styleUrl: './contact-bar.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactBarComponent {

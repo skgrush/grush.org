@@ -12,7 +12,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   ],
   templateUrl: './app-nav.component.html',
   styleUrl: './app-nav.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppNavComponent {

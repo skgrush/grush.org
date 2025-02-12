@@ -14,7 +14,6 @@ import { IconComponent } from '../icon/icon.component';
   ],
   templateUrl: './repository.component.html',
   styleUrl: './repository.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RepositoryComponent {
