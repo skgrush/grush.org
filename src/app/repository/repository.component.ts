@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { GithubService, IGitHubRepo } from './github.service';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { Observable, switchMap } from 'rxjs';

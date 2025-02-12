@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { EmailAddressComponent } from './email-address/email-address.component';
 import { IconComponent } from '../icon/icon.component';
 

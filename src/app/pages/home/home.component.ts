@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { TodoComponent } from '../../todo/todo.component';
 
 @Component({

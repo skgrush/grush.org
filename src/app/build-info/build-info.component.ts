@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation, VERSION } from '@angular/core';
+import { ChangeDetectionStrategy, Component, VERSION } from '@angular/core';
 import buildInfo from './build-info.json';
 
 @Component({
