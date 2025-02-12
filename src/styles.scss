@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@use 'horizontal-hidden-scroll';
+
 html,
 body {
   width: 100%;
@@ -28,12 +30,28 @@ body {
 
   color: var(--txt-color);
   background: var(--bg-color);
-}
 
-:root, :host {
   font: var(--font-size-text) var(--font-family);
 
-  &, *, *:before, *:after {
+  *, *:before, *:after {
     box-sizing: border-box;
   }
 }
+
+.common-page-layout {
+  display: block;
+
+  max-width: 50rem;
+  margin-inline: auto;
+
+  h1 {
+
+    @include horizontal-hidden-scroll.horizontal-hidden-scroll();
+  }
+
+  img.favicon {
+    float: left;
+    margin: 1em;
+  }
+}
+

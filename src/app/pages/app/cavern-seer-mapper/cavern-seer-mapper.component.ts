@@ -12,7 +12,10 @@ import { RouterLink } from '@angular/router';
   ],
   templateUrl: './cavern-seer-mapper.component.html',
   styleUrl: './cavern-seer-mapper.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.common-page-layout]': 'true',
+  },
 })
 export class CavernSeerMapperComponent {
 

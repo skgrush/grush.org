@@ -1,8 +1,5 @@
 
-@use 'shared-project-layout';
-
 :host {
-  @include shared-project-layout.shared-project-layout();
 
   img {
     border-radius: 22%;

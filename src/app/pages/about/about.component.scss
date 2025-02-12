@@ -1,8 +1,4 @@
-@use 'shared-project-layout';
-
 :host {
-
-  @include shared-project-layout.shared-project-layout();
 
   p {
     text-align: justify;

@@ -10,7 +10,10 @@ import { TodoComponent } from '../../../todo/todo.component';
   ],
   templateUrl: './gup.component.html',
   styleUrl: './gup.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.common-page-layout]': 'true',
+  },
 })
 export class GupComponent {
 

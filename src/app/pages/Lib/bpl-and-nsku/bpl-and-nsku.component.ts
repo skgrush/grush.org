@@ -8,7 +8,10 @@ import { RepositoryComponent } from '../../../repository/repository.component';
   ],
   templateUrl: './bpl-and-nsku.component.html',
   styleUrl: './bpl-and-nsku.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.common-page-layout]': 'true',
+  },
 })
 export class BplAndNskuComponent {
 
