@@ -6,6 +6,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build-and-push:
@@ -26,6 +29,14 @@ jobs:
 
       - run: npm run migrate:cicd -- --execute
         name: Migrate
+        if: ${{ github.event_name != 'pull_request' }}
+        env:
+          ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
+          SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+
+      - run: npm run migrate:cicd
+        name: Migrate dry run
+        if: ${{ github.event_name == 'pull_request' }}
         env:
           ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
           SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
