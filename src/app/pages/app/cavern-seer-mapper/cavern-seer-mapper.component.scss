@@ -1,8 +1,5 @@
 
-@use 'shared-project-layout';
-
-:host(grush-cavern-seer-mapper) {
-  @include shared-project-layout.shared-project-layout();
+:host {
 
   img {
     border-radius: 22%;

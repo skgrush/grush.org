@@ -1,6 +1,6 @@
 $nav-row-height: 1.5lh;
 
-:host(grush-root) {
+:host {
   display: grid;
   //background: var(--bg-color);
   min-height: 100dvh;

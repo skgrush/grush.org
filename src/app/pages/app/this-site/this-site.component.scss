@@ -1,6 +1,0 @@
-@use 'shared-project-layout';
-
-:host(grush-this-site) {
-
-  @include shared-project-layout.shared-project-layout();
-}

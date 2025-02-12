@@ -1,12 +1,14 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'grush-about',
   imports: [],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.common-page-layout]': 'true',
+  },
 })
 export class AboutComponent {
 

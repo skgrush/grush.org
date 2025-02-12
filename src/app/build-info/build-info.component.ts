@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation, VERSION } from '@angular/core';
+import { ChangeDetectionStrategy, Component, VERSION } from '@angular/core';
 import buildInfo from './build-info.json';
 
 @Component({
@@ -6,7 +6,6 @@ import buildInfo from './build-info.json';
   imports: [],
   templateUrl: './build-info.component.html',
   styleUrl: './build-info.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BuildInfoComponent {

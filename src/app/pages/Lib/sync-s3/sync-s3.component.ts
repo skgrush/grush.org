@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RepositoryComponent } from '../../../repository/repository.component';
 
 @Component({
@@ -8,8 +8,10 @@ import { RepositoryComponent } from '../../../repository/repository.component';
   ],
   templateUrl: './sync-s3.component.html',
   styleUrl: './sync-s3.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.common-page-layout]': 'true',
+  },
 })
 export class SyncS3Component {
 

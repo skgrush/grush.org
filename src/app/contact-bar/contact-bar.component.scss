@@ -1,8 +1,5 @@
-@use 'nav';
 
-@include nav.nav();
-
-:host([grush-contact-bar]) {
+:host {
 
   .icon {
     aspect-ratio: 1 / 1;

@@ -1,7 +1,5 @@
-@use 'shared-project-layout';
 
-:host(grush-cavern-seer) {
-  @include shared-project-layout.shared-project-layout();
+:host {
 
   grush-todo {
     clear: left;

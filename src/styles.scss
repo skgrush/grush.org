@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@use 'horizontal-hidden-scroll';
+
 html,
 body {
   width: 100%;
@@ -28,12 +30,74 @@ body {
 
   color: var(--txt-color);
   background: var(--bg-color);
-}
 
-:root, :host {
   font: var(--font-size-text) var(--font-family);
 
-  &, *, *:before, *:after {
+  *, *:before, *:after {
     box-sizing: border-box;
+  }
+}
+
+a:not(.opt-out-style) {
+
+  &, &:visited {
+    color: var(--accent-color);
+  }
+  &:hover {
+    color: deepskyblue;
+  }
+  &:active {
+    color: var(--txt-color);
+  }
+
+  &[routerlinkactive] {
+    &.active-link {
+      text-decoration: dotted underline;
+      color: var(--txt-color);
+      cursor: default;
+    }
+  }
+}
+
+.common-page-layout {
+  display: block;
+
+  max-width: 50rem;
+  margin-inline: auto;
+
+  h1 {
+    @include horizontal-hidden-scroll.horizontal-hidden-scroll();
+  }
+
+  img.favicon {
+    float: left;
+    margin: 1em;
+  }
+}
+
+nav:not(.opt-out-style) {
+  @include horizontal-hidden-scroll.horizontal-hidden-scroll();
+
+  // nav>ul horizontal pattern
+  & > ul {
+    all: unset;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    margin-inline: 1em;
+
+    & > li {
+      white-space: nowrap;
+
+      &:not(:last-child) {
+
+        &::after {
+          border-inline-start: 1px solid var(--txt-color);
+          margin-inline: 0.5em;
+          content: "";
+        }
+      }
+    }
   }
 }

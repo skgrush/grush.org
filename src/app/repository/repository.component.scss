@@ -1,14 +1,12 @@
-@use 'link';
+
 @use 'horizontal-hidden-scroll';
 
-:host(grush-repository) {
+:host {
 
   display: block;
   margin: 0.5em;
   padding: 0.5em;
   overflow: hidden;
-
-  @include link.link();
 
   #github-repo-icon {
     aspect-ratio: 1;

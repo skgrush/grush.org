@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { from, map } from 'rxjs';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
@@ -12,7 +12,6 @@ import { AsyncPipe } from '@angular/common';
   ],
   templateUrl: './lib-nav.component.html',
   styleUrl: './lib-nav.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LibNavComponent {

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TodoComponent } from '../../../todo/todo.component';
 import { RepositoryComponent } from '../../../repository/repository.component';
 import { RouterLink } from '@angular/router';
@@ -12,8 +12,10 @@ import { RouterLink } from '@angular/router';
   ],
   templateUrl: './cavern-seer-mapper.component.html',
   styleUrl: './cavern-seer-mapper.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.common-page-layout]': 'true',
+  },
 })
 export class CavernSeerMapperComponent {
 
