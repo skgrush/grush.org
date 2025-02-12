@@ -38,6 +38,27 @@ body {
   }
 }
 
+a:not(.opt-out-link-style) {
+
+  &, &:visited {
+    color: var(--accent-color);
+  }
+  &:hover {
+    color: deepskyblue;
+  }
+  &:active {
+    color: var(--txt-color);
+  }
+
+  &[routerlinkactive] {
+    &.active-link {
+      text-decoration: dotted underline;
+      color: var(--txt-color);
+      cursor: default;
+    }
+  }
+}
+
 .common-page-layout {
   display: block;
 

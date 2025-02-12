@@ -1,4 +1,4 @@
-@use 'link';
+
 @use 'horizontal-hidden-scroll';
 
 :host {
@@ -7,8 +7,6 @@
   margin: 0.5em;
   padding: 0.5em;
   overflow: hidden;
-
-  @include link.link();
 
   #github-repo-icon {
     aspect-ratio: 1;

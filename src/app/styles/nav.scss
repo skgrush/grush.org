@@ -1,5 +1,4 @@
 
-@use 'link';
 @use 'horizontal-hidden-scroll';
 
 @mixin nav() {
@@ -29,7 +28,5 @@
         }
       }
     }
-
-    @include link.link();
   }
 }
