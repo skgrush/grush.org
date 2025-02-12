@@ -38,7 +38,7 @@ body {
   }
 }
 
-a:not(.opt-out-link-style) {
+a:not(.opt-out-style) {
 
   &, &:visited {
     color: var(--accent-color);
@@ -66,7 +66,6 @@ a:not(.opt-out-link-style) {
   margin-inline: auto;
 
   h1 {
-
     @include horizontal-hidden-scroll.horizontal-hidden-scroll();
   }
 
@@ -76,3 +75,29 @@ a:not(.opt-out-link-style) {
   }
 }
 
+nav:not(.opt-out-style) {
+  @include horizontal-hidden-scroll.horizontal-hidden-scroll();
+
+  // nav>ul horizontal pattern
+  & > ul {
+    all: unset;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    margin-inline: 1em;
+
+    & > li {
+      white-space: nowrap;
+
+      &:not(:last-child) {
+
+        &::after {
+          border-inline-start: 1px solid var(--txt-color);
+          margin-inline: 0.5em;
+          content: "";
+        }
+      }
+    }
+  }
+}
