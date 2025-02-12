@@ -5,6 +5,11 @@
 @mixin shared-project-layout {
   @include link.link();
 
+  display: block;
+
+  max-width: 50rem;
+  margin-inline: auto;
+
   h1 {
     @include horizontal-hidden-scroll.horizontal-hidden-scroll();
   }

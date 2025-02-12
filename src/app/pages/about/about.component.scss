@@ -1,49 +1,51 @@
+@use 'shared-project-layout';
+
 :host(grush-about) {
 
+  @include shared-project-layout.shared-project-layout();
+
+  p {
+    text-align: justify;
+  }
+
+  mark {
+    background: var(--accent-color);
+    color: black;
+  }
 
   #php-logo {
     aspect-ratio: 711.20123 / 383.5975;
     float: left;
-    width: 100px;
     shape-outside: ellipse(50% 50% at 50% 50%);
   }
 
   #html5-logo {
-    aspect-ratio: 1 / 1;
     float: right;
-    width: 100px;
     shape-outside: polygon(0 0, 94% 0, 85% 100%, 100% 100%, 50% 100%, 8% 85%)
   }
 
   #js-logo {
-    aspect-ratio: 1 / 1;
     float: left;
-    width: 100px;
     margin-inline-end: 0.5em;
   }
 
   #ts-logo {
-    aspect-ratio: 1 / 1;
     float: right;
-    width: 100px;
     margin-inline-start: 0.5em;
   }
 
   #ng-logo {
-    aspect-ratio: 1 / 1;
     float: left;
-    width: 100px;
     shape-outside: polygon(50% 5%, 94% 25%, 90% 64%, 50% 90%, 20% 80%, 20% 20%)
   }
 
   #dotnet-logo {
-    aspect-ratio: 1 / 1;
     float: right;
-    width: 100px;
     margin-inline-start: 0.5em;
   }
 
   img.lang-logo {
-
+    aspect-ratio: 1 / 1;
+    width: 100px;
   }
 }

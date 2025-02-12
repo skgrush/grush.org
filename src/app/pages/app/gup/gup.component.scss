@@ -1,0 +1,5 @@
+@use 'shared-project-layout';
+
+:host(grush-gup) {
+  @include shared-project-layout.shared-project-layout();
+}

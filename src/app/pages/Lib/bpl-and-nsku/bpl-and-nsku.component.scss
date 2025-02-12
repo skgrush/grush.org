@@ -1,0 +1,5 @@
+@use 'shared-project-layout';
+
+:host(grush-bpl-and-nsku) {
+  @include shared-project-layout.shared-project-layout();
+}

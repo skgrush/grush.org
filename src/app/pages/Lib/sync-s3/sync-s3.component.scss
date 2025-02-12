@@ -1,0 +1,5 @@
+@use 'shared-project-layout';
+
+:host(grush-sync-s3) {
+  @include shared-project-layout.shared-project-layout();
+}
