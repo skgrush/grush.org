@@ -1,5 +1,5 @@
 <ul>
-  @for (route of (routes$ | async); track route.path) {
+  @for (route of routes; track route.path) {
     <li><a [routerLink]="['/App', route.path]" routerLinkActive="active-link">{{ route.title }}</a></li>
   }
 </ul>
