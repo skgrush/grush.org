@@ -5,12 +5,18 @@ export const routes: Routes = [
     path: '',
     loadComponent: () => import('./pages/home/home.component'),
     pathMatch: 'full',
+    data: {
+      description: 'TODO: Insert homepage here',
+    }
   },
   {
     path: 'About',
     loadComponent: () => import('./pages/about/about.component'),
     pathMatch: 'full',
     title: 'About',
+    data: {
+      description: 'Oh just a lil something about me 😳',
+    }
   },
   {
     path: 'Lib',
