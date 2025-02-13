@@ -16,33 +16,50 @@ const routes = [
       {
         path: '',
         pathMatch: 'full',
-        data: undefined,
         title: 'Apps',
+        data: {
+          description: 'Applications by skgrush',
+        },
         loadComponent: () => import('./app-index.component'),
       },
       {
         path: 'Grush.org',
         title: 'Grush.org',
+        data: {
+          description: 'Webpage about this website as a webapp as a project',
+        },
         loadComponent: () => import('./this-site/this-site.component'),
       },
       {
         path: 'CavernSeer',
         title: 'CavernSeer',
+        data: {
+          description: 'iOS and iPadOS app by skgrush for LiDAR scanning and mapping caves.',
+        },
         loadComponent: () => import('./cavern-seer/cavern-seer.component'),
       },
       {
         path: 'CavernSeerMapper',
         title: 'CavernSeerMapper',
+        data: {
+          description: 'Webapp by skgrush for mapping and compositive LiDAR scan models of caves.',
+        },
         loadComponent: () => import('./cavern-seer-mapper/cavern-seer-mapper.component')
       },
       {
         path: 'What-time-is-it-in',
         title: 'What time is it in ...?',
+        data: {
+          description: 'Webapp by skgrush for comparing timezones.',
+        },
         loadComponent: () => import('./what-time-is-it-in/what-time-is-it-in.component'),
       },
       {
         path: 'GUP',
         title: 'GUP',
+        data: {
+          description: 'Defunct webapp by skgrush for uploading files securely to S3.',
+        },
         loadComponent: () => import('./gup/gup.component'),
       }
     ] satisfies Routes
