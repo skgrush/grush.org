@@ -2,6 +2,8 @@ import { inject, Injectable } from '@angular/core';
 import { RouteConfigLoadEnd, Router } from '@angular/router';
 import { filter, tap } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
+import { TitleService } from './title.service';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +11,7 @@ import { DOCUMENT } from '@angular/common';
 export class MetadataService {
   readonly #router = inject(Router);
   readonly #document = inject(DOCUMENT);
+  readonly #titleService = inject(TitleService);
 
   readonly #metaDescription = this.#document.querySelector('meta[name=description]')!;
   readonly #metaOgTitle = this.#document.querySelector('meta[property="og:title"]')!;
@@ -29,7 +32,10 @@ export class MetadataService {
   );
 
   readonly #fx = {
-    metadata: this.#updateMetadata$.subscribe(),
+    metadata: this.#updateMetadata$.pipe(takeUntilDestroyed()).subscribe(),
+    title: this.#titleService.rawTitle$
+      .pipe(takeUntilDestroyed())
+      .subscribe(title => this.updateTitle(title)),
   };
 
   updateTitle(title: string) {
