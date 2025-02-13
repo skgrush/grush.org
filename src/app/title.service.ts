@@ -1,22 +1,21 @@
 import { inject, Injectable } from '@angular/core';
 import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { DOCUMENT } from '@angular/common';
+import { MetadataService } from './metadata.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TitleService extends TitleStrategy {
   readonly #title = inject(Title);
-
-  readonly #metaOgTitle = inject(DOCUMENT).querySelector('meta[property="og:title"]')!;
+  readonly #metadata = inject(MetadataService);
 
   readonly defaultTitle = 'Grush.org';
 
   override updateTitle(snapshot: RouterStateSnapshot): void {
     const title = this.buildTitle(snapshot);
 
-    this.#metaOgTitle.setAttribute('content', title ?? this.defaultTitle);
+    this.#metadata.updateTitle(title ?? this.defaultTitle);
     this.#title.setTitle(
       (
         title

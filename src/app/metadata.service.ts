@@ -11,6 +11,10 @@ export class MetadataService {
   readonly #document = inject(DOCUMENT);
 
   readonly #metaDescription = this.#document.querySelector('meta[name=description]')!;
+  readonly #metaOgTitle = this.#document.querySelector('meta[property="og:title"]')!;
+
+  readonly #metaTwitterTitle = this.#document.querySelector('meta[property="twitter:title"]')!;
+  readonly #metaTwitterDescription = this.#document.querySelector('meta[property="twitter:description"]')!;
 
   readonly #updateMetadata$ = this.#router.events.pipe(
     filter(e => e instanceof RouteConfigLoadEnd),
@@ -18,11 +22,18 @@ export class MetadataService {
     tap(e => {
       const routeData = e.route.data;
 
-      this.#metaDescription.setAttribute('content', routeData?.['description'] ?? '');
+      const description = routeData?.['description'] ?? '';
+      this.#metaDescription.setAttribute('content', description);
+      this.#metaTwitterDescription.setAttribute('content', description);
     }),
   );
 
   readonly #fx = {
     metadata: this.#updateMetadata$.subscribe(),
   };
+
+  updateTitle(title: string) {
+    this.#metaOgTitle.setAttribute('content', title);
+    this.#metaTwitterTitle.setAttribute('content', title);
+  }
 }
