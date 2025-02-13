@@ -1,13 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { from, map } from 'rxjs';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { AsyncPipe } from '@angular/common';
+import routes from '../routes';
 
 @Component({
   selector: 'nav[grush-lib-nav]',
   imports: [
     RouterLink,
-    AsyncPipe,
     RouterLinkActive,
   ],
   templateUrl: './lib-nav.component.html',
@@ -16,11 +14,8 @@ import { AsyncPipe } from '@angular/common';
 })
 export class LibNavComponent {
 
-  readonly routes$ = from(import('../routes')).pipe(
-    map(({ default: routes }) => routes[1].children
-      .filter((route): route is (typeof route & { title: string }) => 'title' in route && route.title && route.path !== ''),
-    ),
-  );
+  readonly routes = routes[1].children
+    .filter((route): route is (typeof route & { title: string }) => 'title' in route && route.title && route.path !== '');
 }
 
 export default LibNavComponent;
