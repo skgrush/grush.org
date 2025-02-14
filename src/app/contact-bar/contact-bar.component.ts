@@ -10,7 +10,10 @@ import { IconComponent } from '../icon/icon.component';
   ],
   templateUrl: './contact-bar.component.html',
   styleUrl: './contact-bar.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.opt-out-style]': 'true',
+  }
 })
 export class ContactBarComponent {
 
