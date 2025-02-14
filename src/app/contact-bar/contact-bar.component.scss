@@ -11,6 +11,7 @@
 
     & > li {
       all: unset;
+      white-space: pre;
 
       &:has( > li ) {
         height: 100%;
