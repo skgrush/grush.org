@@ -10,7 +10,7 @@
   transition: width 1s ease-in-out;
 
   &.visible {
-    width: calc(100% - 2lh);
+    width: 100%;
   }
 }
 

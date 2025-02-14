@@ -1,9 +1,10 @@
 <ul>
   <li>
     <a id="bsky-link" title="bsky @sayumn.grush.org" href="https://bsky.app/profile/sayumn.grush.org" target="_blank">
-      <img class="icon" [style.height.lh]="1.5" src="/media/bluesky_media_kit_logo_svgs.svg"/>
+      <img class="icon" [style.height.lh]="2" [style.margin.lh]="-0.33" src="/media/bluesky_media_kit_logo_svgs.svg"/>
     </a>
   </li>
+  <li><hr/></li>
   <li>
     <i role="button" title="Electronic mail" tabindex="0" (click)="toggleEmail()">
       <grush-icon name="mail" class="icon" [style.font-size.lh]="1.5" />
@@ -12,9 +13,10 @@
         <grush-email-address [class.visible]="emailVisible()" />
     }
   </li>
+  <li><hr/></li>
   <li>
     <a id="github-link" title="GitHub skgrush" href="https://github.com/skgrush" target="_blank">
-      <img class="icon" [style.height.cap]="2" src="/media/github-mark-white.svg"/>
+      <img class="icon" [style.height.cap]="2" [style.margin.cap]="0.3" src="/media/github-mark-white.svg"/>
     </a>
   </li>
 </ul>
