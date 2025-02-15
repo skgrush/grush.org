@@ -40,7 +40,7 @@ const routes = [
       },
       {
         path: 'CavernSeerMapper',
-        title: 'CavernSeerMapper',
+        title: 'CavernSeer Mapper',
         data: {
           description: 'Webapp by skgrush for mapping and compositive LiDAR scan models of caves.',
         },
