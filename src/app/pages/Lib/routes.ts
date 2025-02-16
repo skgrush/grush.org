@@ -12,12 +12,17 @@ const routes = [
       {
         path: '',
         pathMatch: 'full',
-        title: 'Libraries',
-        data: {
-          description: 'Libraries by skgrush',
-        },
-        loadComponent: () => import('./lib-index.component'),
+        redirectTo: 'RecordCollections'
       },
+      // {
+      //   path: '',
+      //   pathMatch: 'full',
+      //   title: 'Libraries',
+      //   data: {
+      //     description: 'Libraries by skgrush',
+      //   },
+      //   loadComponent: () => import('./lib-index.component'),
+      // },
       {
         path: 'RecordCollections',
         title: 'RecordCollections',
@@ -47,7 +52,7 @@ const routes = [
         data: undefined,
         redirectTo: '',
       },
-    ] as const satisfies Routes,
+    ],
   }
 ] as const satisfies Routes;
 
