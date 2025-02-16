@@ -3,8 +3,8 @@
 <img id="home-page-icon" alt="Home on a page" src="media/home-page.svg">
 
 <p id="gdimp">
-  @for (i of 'Graphic\u00A0Design\u00A0is\u00A0NOT\u00A0my\u00A0pas\u00ADsion'; track i) {
-    <span [style.z-index]="$index">{{i}}</span>
+  @for (i of 'Graphic\u00A0Design\u00A0is\u00A0NOT\u00A0my\u00A0pas\u00ADsion'; track $index) {
+    <span>{{i}}</span>
   }<br>
 <!--  <span>s</span><span>s</span><span>i</span><span>o</span><span>n</span>-->
 </p>

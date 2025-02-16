@@ -35,9 +35,25 @@
   font-size: calc(var(--width) / 12);
   width: var(--width);
 
-  @for $i from 1 through 5 {
-    &> span:nth-child(5n + #{$i}) {
-      vertical-align: #{($i * 17 % 5) * 3}px;
+  &>span {
+    display: inline-block;
+
+    animation: vertical-slide 4s infinite alternate ease-in-out both;
+
+    $number-of-delays: 7;
+    @for $i from 1 through $number-of-delays {
+      &:nth-child(#{$number-of-delays}n + #{$i}) {
+        animation-delay: #{$i}s;
+      }
+    }
+
+    @keyframes vertical-slide {
+      from {
+        translate: 0 0;
+      }
+      to {
+        translate: 0 10px;
+      }
     }
   }
 }
@@ -50,11 +66,7 @@
 
   &>span {
     display: block;
-    animation-name: slider;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-direction: normal ;
-    animation-timing-function: linear;
+    animation: slider 5s infinite normal linear;
 
     @keyframes slider {
       from {
@@ -66,15 +78,4 @@
     }
   }
 }
-
-  //text-shadow:
-  //  -4px 4px #ef3550,
-  //  -8px 8px #f48fb1,
-  //  -12px 12px #7e57c2,
-  //  -16px 16px #2196f3,
-  //  -20px 20px #26c6da,
-  //  -24px 24px #43a047,
-  //  -28px 28px #eeff41,
-  //  -32px 32px #f9a825,
-  //  -36px 36px #ff5722;
 
