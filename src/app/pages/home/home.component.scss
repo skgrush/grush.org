@@ -1,5 +1,79 @@
+@use 'sass:map';
+@use 'sass:list';
+
+:host {
+  --width: min(90vw, 400px)
+}
 
 #home-page-icon {
   aspect-ratio: 1 / 1;
-  width: min(90vw, 400px);
+  width: var(--width);
 }
+
+#gdimp {
+  $colors: (
+    1: #ef3550,
+    2: #f48fb1,
+    3: #7e57c2,
+    4: #2196f3,
+    5: #26c6da,
+    6: #43a047,
+    7: #eeff41,
+    8: #f9a825,
+    9: #ff5722
+  );
+  $textShadow: ();
+  $mult: 2px;
+  @each $i, $color in $colors {
+    $textShadow: list.append($textShadow, -$i*$mult $i*$mult $color, comma);
+  }
+
+  text-shadow: $textShadow;
+  font-family: cursive;
+
+  font-size: calc(var(--width) / 12);
+  width: var(--width);
+
+  @for $i from 1 through 5 {
+    &> span:nth-child(5n + #{$i}) {
+      vertical-align: #{($i * 17 % 5) * 4}px;
+    }
+  }
+}
+
+#marquee {
+  width: var(--width);
+  white-space: pre;
+  overflow-x: hidden;
+  $numChar: 53;
+
+  &>span {
+    display: block;
+    animation-name: slider;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal ;
+    animation-timing-function: linear;
+
+    @keyframes slider {
+      from {
+        translate: 0 0;
+      }
+      to {
+        translate: -#{$numChar}ch 0;
+      }
+    }
+  }
+}
+
+  //text-shadow:
+  //  -4px 4px #ef3550,
+  //  -8px 8px #f48fb1,
+  //  -12px 12px #7e57c2,
+  //  -16px 16px #2196f3,
+  //  -20px 20px #26c6da,
+  //  -24px 24px #43a047,
+  //  -28px 28px #eeff41,
+  //  -32px 32px #f9a825,
+  //  -36px 36px #ff5722;
+
