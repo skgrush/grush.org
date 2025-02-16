@@ -9,39 +9,31 @@
     color: black;
   }
 
-  #php-logo {
-    aspect-ratio: 711.20123 / 383.5975;
-    float: left;
-    shape-outside: ellipse(50% 50% at 50% 50%);
-  }
-
-  #html5-logo {
-    float: right;
-    shape-outside: polygon(0 0, 94% 0, 85% 100%, 100% 100%, 50% 100%, 8% 85%)
-  }
-
-  #js-logo {
-    float: left;
-    margin-inline-end: 0.5em;
-  }
-
-  #ts-logo {
-    float: right;
-    margin-inline-start: 0.5em;
-  }
-
-  #ng-logo {
-    float: left;
-    shape-outside: polygon(50% 5%, 94% 25%, 90% 64%, 50% 90%, 20% 80%, 20% 20%)
-  }
-
-  #dotnet-logo {
-    float: right;
-    margin-inline-start: 0.5em;
-  }
 
   img.lang-logo {
     aspect-ratio: 1 / 1;
     width: 100px;
+
+    &.ll-left {
+      float: left;
+      margin-inline-end: var(--small-gap);
+    }
+    &.ll-right {
+      float: right;
+      margin-inline-start: var(--small-gap);
+    }
+  }
+
+  #php-logo {
+    aspect-ratio: 711.20123 / 383.5975;
+    shape-outside: ellipse(50% 50% at 50% 50%);
+  }
+
+  #html5-logo {
+    shape-outside: polygon(0 0, 94% 0, 85% 100%, 100% 100%, 50% 100%, 8% 85%);
+  }
+
+  #ng-logo {
+    shape-outside: polygon(50% 5%, 94% 25%, 90% 64%, 50% 90%, 20% 80%, 20% 20%);
   }
 }
