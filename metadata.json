@@ -1,5 +1,5 @@
 {
-  "index.html": {
+  "**/index.html": {
     "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
   },
   "ngsw.json": {
@@ -10,41 +10,5 @@
   },
   "manifest.webmanifest": {
     "CacheControl": "public, proxy-revalidate, max-age=28800"
-  },
-  "App/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
-  },
-  "App/CavernSeer/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
-  },
-  "App/CavernSeerMapper/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
-  },
-  "App/What-time-is-it-in/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
-  },
-  "Lib/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
-  },
-  "About/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
-  },
-  "Lib/RecordCollections/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
-  },
-  "error/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
-  },
-  "App/GUP/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
-  },
-  "App/Grush.org/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
-  },
-  "Lib/BPlist-and-NSKeyedUnarchiver/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
-  },
-  "Lib/sync-s3/index.html": {
-    "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
   }
 }

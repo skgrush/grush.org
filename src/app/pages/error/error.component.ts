@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, PLATFORM_ID } from '@angular/core';
+import { afterNextRender, ChangeDetectionStrategy, Component, inject, PLATFORM_ID, signal } from '@angular/core';
 import { defer, from, map, NEVER, of, shareReplay } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { AsyncPipe, isPlatformServer, PlatformLocation } from '@angular/common';
@@ -15,6 +15,7 @@ import { AsyncPipe, isPlatformServer, PlatformLocation } from '@angular/common';
 export class ErrorComponent {
 
   readonly #isServer = isPlatformServer(inject(PLATFORM_ID));
+  readonly isServer = signal(this.#isServer);
   readonly #location = inject(PlatformLocation);
   readonly #errorPathRe = /\/error(\/(index.html)?)?$/;
 
@@ -74,6 +75,12 @@ export class ErrorComponent {
     shareReplay(1),
     takeUntilDestroyed(),
   );
+
+  #fx = {
+    anr: afterNextRender(() => {
+      this.isServer.set(false);
+    }),
+  }
 }
 
 export default ErrorComponent;

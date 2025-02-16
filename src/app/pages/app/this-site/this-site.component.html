@@ -8,9 +8,13 @@
   and other such stuff.
 </p>
 <p>
-  Written in Angular 19 zoneless with SSG.
+  Written in Angular 19 zoneless, with SSG — Server-side generation, meaning each route
+  is generated to its own <code>index.html</code> in the appropriate
+  file path, and when it is rendered in the browser the Angular runtime
+  "hydrates" the page.
+  One benefit of SSG is there's no layout flash since the layout comes with
+  the HTML from the server. Another is that almost the entire site works without
+  JS enabled! Only the GitHub repo integrations require JS.
 </p>
-
-<grush-todo text="this website"/>
 
 <grush-repository repoName="grush.org"/>
