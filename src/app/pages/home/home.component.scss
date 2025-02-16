@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use 'sass:list';
+@use 'sass:math';
 
 :host {
   --width: min(90vw, 400px)
@@ -25,7 +26,7 @@
   $textShadow: ();
   $mult: 2px;
   @each $i, $color in $colors {
-    $textShadow: list.append($textShadow, -$i*$mult $i*$mult $color, comma);
+    $textShadow: list.append($textShadow, math.div(-$i*$mult, 3) $i*$mult $color, comma);
   }
 
   text-shadow: $textShadow;
@@ -36,7 +37,7 @@
 
   @for $i from 1 through 5 {
     &> span:nth-child(5n + #{$i}) {
-      vertical-align: #{($i * 17 % 5) * 4}px;
+      vertical-align: #{($i * 17 % 5) * 3}px;
     }
   }
 }
