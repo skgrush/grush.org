@@ -35,7 +35,7 @@
   font-size: calc(var(--width) / 12);
   width: var(--width);
 
-  &>span {
+  &>i {
     display: inline-block;
 
     animation: vertical-slide 4s infinite alternate ease-in-out both;
