@@ -14,10 +14,10 @@ $nav-row-height: 1.5lh;
     grid-template-rows: $nav-row-height 0 $nav-row-height min-content;
     overflow: hidden;
 
-    padding-block: 1em;
+    padding-block: var(--medium-gap);
 
     border-bottom: 2px ridge;
-    border-radius: 1em;
+    border-radius: var(--medium-gap);
 
     & > nav[grush-contact-bar] {
       grid-row: 4;
@@ -25,7 +25,7 @@ $nav-row-height: 1.5lh;
   }
 
   & > main {
-    padding: 1em;
+    padding: var(--medium-gap);
     overflow-x: hidden;
   }
 }

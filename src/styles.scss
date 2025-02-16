@@ -24,6 +24,8 @@ body {
   --font-size-ui: 16px;
   --font-size-text: 14px;
   --font-size-title: 1.5 * 14px;
+  --small-gap: 0.5em;
+  --medium-gap: 1em;
 
   color-scheme: dark;
   accent-color: var(--accent-color);
@@ -85,7 +87,7 @@ nav:not(.opt-out-style) {
     display: flex;
     flex-direction: row;
 
-    margin-inline: 1em;
+    margin-inline: var(--medium-gap);
 
     & > li {
       white-space: nowrap;
@@ -94,7 +96,7 @@ nav:not(.opt-out-style) {
 
         &::after {
           border-inline-start: 1px solid var(--txt-color);
-          margin-inline: 0.5em;
+          margin-inline: var(--small-gap);
           content: "";
         }
       }
