@@ -4,8 +4,8 @@
 :host {
 
   display: block;
-  margin: 0.5em;
-  padding: 0.5em;
+  margin: var(--small-gap);
+  padding: var(--small-gap);
   overflow: hidden;
 
   #github-repo-icon {
@@ -14,7 +14,7 @@
     vertical-align: middle;
   }
 
-  border-radius: 1em;
+  border-radius: var(--medium-gap);
   &, .badge {
     border: 1px solid;
   }
@@ -26,7 +26,7 @@
   h1 {
     font-weight: bold;
     font-size: var(--font-size-title);
-    padding-block-end: 0.5em;
+    padding-block-end: var(--small-gap);
   }
   h2 {
     @include horizontal-hidden-scroll.horizontal-hidden-scroll();
@@ -42,7 +42,7 @@
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
-    grid-gap: 1em;
+    grid-gap: var(--medium-gap);
   }
 
   .badge {

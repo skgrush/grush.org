@@ -4,10 +4,11 @@
   & > ul {
     all: unset;
     display: grid;
-    grid-template-columns: min-content 3px min-content 3px min-content;
+    grid-template-columns: min-content var(--small-gap) min-content var(--small-gap) min-content;
     grid-template-rows: 1fr;
     justify-items: center;
-    gap: 0.4em;
+    gap: var(--small-gap);
+    margin-inline: var(--medium-gap);
 
     & > li {
       all: unset;

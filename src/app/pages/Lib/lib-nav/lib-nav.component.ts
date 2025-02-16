@@ -15,7 +15,7 @@ import routes from '../routes';
 export class LibNavComponent {
 
   readonly routes = routes[1].children
-    .filter((route): route is (typeof route & { title: string }) => 'title' in route && route.title && route.path !== '');
+    .filter((route): route is (typeof route & { title: string }) => 'title' in route && !!route.title);
 }
 
 export default LibNavComponent;

@@ -1,0 +1,81 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
+
+:host {
+  --width: min(90vw, 400px)
+}
+
+#home-page-icon {
+  aspect-ratio: 1 / 1;
+  width: var(--width);
+}
+
+#gdimp {
+  $colors: (
+    1: #ef3550,
+    2: #f48fb1,
+    3: #7e57c2,
+    4: #2196f3,
+    5: #26c6da,
+    6: #43a047,
+    7: #eeff41,
+    8: #f9a825,
+    9: #ff5722
+  );
+  $textShadow: ();
+  $mult: 2px;
+  @each $i, $color in $colors {
+    $textShadow: list.append($textShadow, math.div(-$i*$mult, 3) $i*$mult $color, comma);
+  }
+
+  text-shadow: $textShadow;
+  font-family: cursive;
+
+  font-size: calc(var(--width) / 12);
+  width: var(--width);
+
+  &>i {
+    display: inline-block;
+
+    animation: vertical-slide 4s infinite alternate ease-in-out both;
+
+    $number-of-delays: 7;
+    @for $i from 1 through $number-of-delays {
+      &:nth-child(#{$number-of-delays}n + #{$i}) {
+        animation-delay: #{$i}s;
+      }
+    }
+
+    @keyframes vertical-slide {
+      from {
+        translate: 0 0;
+      }
+      to {
+        translate: 0 10px;
+      }
+    }
+  }
+}
+
+#marquee {
+  width: var(--width);
+  white-space: pre;
+  overflow-x: hidden;
+  $numChar: 53;
+
+  &>span {
+    display: block;
+    animation: slider 5s infinite normal linear;
+
+    @keyframes slider {
+      from {
+        translate: 0 0;
+      }
+      to {
+        translate: -#{$numChar}ch 0;
+      }
+    }
+  }
+}
+

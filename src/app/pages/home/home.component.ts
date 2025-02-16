@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TodoComponent } from '../../todo/todo.component';
 
 @Component({
@@ -8,15 +8,12 @@ import { TodoComponent } from '../../todo/todo.component';
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.common-page-layout]': 'true',
+  },
 })
 export class HomeComponent {
-
-  readonly list = signal([0]);
-
-  add() {
-    this.list.update(oldList => [...oldList, oldList.at(-1)! + 1])
-  }
 }
 
 export default HomeComponent;

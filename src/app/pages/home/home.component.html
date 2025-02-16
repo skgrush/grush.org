@@ -1,1 +1,18 @@
 <grush-todo text="Homepage Things"/>
+
+<img id="home-page-icon" alt="Home on a page" src="media/home-page.svg">
+
+<p id="gdimp">
+  @for (i of 'Graphic\u00A0Design\u00A0is\u00A0NOT\u00A0my\u00A0pas\u00ADsion'; track $index) {
+    <i>{{i}}</i>
+  }<br>
+</p>
+
+<p id="marquee">
+  <span>
+  @for (i of [0,0]; track i) {
+    But really, I'm much better with layout than style.
+  }
+  </span>
+</p>
+

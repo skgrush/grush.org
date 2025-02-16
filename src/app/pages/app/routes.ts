@@ -16,12 +16,17 @@ const routes = [
       {
         path: '',
         pathMatch: 'full',
-        title: 'Apps',
-        data: {
-          description: 'Applications by skgrush',
-        },
-        loadComponent: () => import('./app-index.component'),
+        redirectTo: 'Grush.org'
       },
+      // {
+      //   path: '',
+      //   pathMatch: 'full',
+      //   title: 'Apps',
+      //   data: {
+      //     description: 'Applications by skgrush',
+      //   },
+      //   loadComponent: () => import('./app-index.component'),
+      // },
       {
         path: 'Grush.org',
         title: 'Grush.org',
@@ -61,8 +66,8 @@ const routes = [
           description: 'Defunct webapp by skgrush for uploading files securely to S3.',
         },
         loadComponent: () => import('./gup/gup.component'),
-      }
-    ] satisfies Routes
+      },
+    ]
   }
 ] as const satisfies Routes;
 
