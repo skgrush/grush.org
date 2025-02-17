@@ -3,10 +3,10 @@
     "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
   },
   "App/index.html": {
-    "WebsiteRedirectLocation": "https://github.com/App/Grush.org"
+    "WebsiteRedirectLocation": "https://grush.org/App/Grush.org"
   },
   "Lib/index.html": {
-    "WebsiteRedirectLocation": "https://github.com/App/RecordCollections"
+    "WebsiteRedirectLocation": "https://grush.org/App/RecordCollections"
   },
   "ngsw.json": {
     "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
