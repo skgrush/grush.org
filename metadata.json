@@ -2,6 +2,12 @@
   "**/index.html": {
     "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
   },
+  "App/index.html": {
+    "x-amz-website-redirect-location": "https://github.com/App/Grush.org"
+  },
+  "Lib/index.html": {
+    "x-amz-website-redirect-location": "https://github.com/App/RecordCollections"
+  },
   "ngsw.json": {
     "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
   },
