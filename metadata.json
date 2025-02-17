@@ -3,16 +3,16 @@
     "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
   },
   "App/index.html": {
-    "x-amz-website-redirect-location": "https://github.com/App/Grush.org"
+    "WebsiteRedirectLocation": "https://github.com/App/Grush.org"
   },
   "Lib/index.html": {
-    "x-amz-website-redirect-location": "https://github.com/App/RecordCollections"
+    "WebsiteRedirectLocation": "https://github.com/App/RecordCollections"
   },
   "ngsw.json": {
     "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
   },
   "github": {
-    "x-amz-website-redirect-location": "https://github.com/skgrush"
+    "WebsiteRedirectLocation": "https://github.com/skgrush"
   },
   "manifest.webmanifest": {
     "CacheControl": "public, proxy-revalidate, max-age=28800"
