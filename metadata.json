@@ -6,7 +6,7 @@
     "WebsiteRedirectLocation": "https://grush.org/App/Grush.org"
   },
   "Lib/index.html": {
-    "WebsiteRedirectLocation": "https://grush.org/App/RecordCollections"
+    "WebsiteRedirectLocation": "https://grush.org/Lib/RecordCollections"
   },
   "ngsw.json": {
     "CacheControl": "public, must-revalidate, proxy-revalidate, max-age=120"
