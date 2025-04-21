@@ -13,6 +13,10 @@
       Include year?
       <input type="checkbox" [ngModel]="includeYear()" (ngModelChange)="includeYear.set($event)" [ngModelOptions]="{ standalone: true }">
     </label>
+    <label>
+      Only show reduced?
+      <input type="checkbox" [ngModel]="onlyShowReduced()" (ngModelChange)="onlyShowReduced.set($event)" [ngModelOptions]="{ standalone: true }">
+    </label>
 <!--    <label>-->
 <!--      Format?-->
 <!--    </label>-->
@@ -20,7 +24,7 @@
 </header>
 
 @defer {
-  <section>
+  <section [class.only-show-reduced]="onlyShowReduced()">
     @for (parts of dates(); track parts.dateParts) {
       <div class="row">
         @if(parts.dateObj.getDate() === 1) {

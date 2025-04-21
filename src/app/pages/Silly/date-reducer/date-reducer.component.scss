@@ -3,6 +3,14 @@ section {
   display: grid;
   grid-template-columns: min-content min-content min-content;
   column-gap: 1em;
+
+  &.only-show-reduced {
+    time, .gcd {
+      display: none;
+    }
+
+    grid-template-columns: min-content;
+  }
 }
 
 time, .gcd, .reduced {

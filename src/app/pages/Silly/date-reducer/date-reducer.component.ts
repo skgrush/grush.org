@@ -16,6 +16,7 @@ export class DateReducerComponent {
 
   readonly includeYear = signal(false);
   readonly format = signal(DateReducerFormat.ISO);
+  readonly onlyShowReduced = signal(false);
 
   readonly dates = computed(() => {
     const includeYear = this.includeYear();
