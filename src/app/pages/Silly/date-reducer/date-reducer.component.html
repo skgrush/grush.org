@@ -10,8 +10,9 @@
 
   <form (submit)="$event.preventDefault()">
     <label>
-      Include year?
-      <input type="checkbox" [ngModel]="includeYear()" (ngModelChange)="includeYear.set($event)" [ngModelOptions]="{ standalone: true }">
+      Optional year
+      <input type="number" #yearInput (change)="yearChanged($event)" [min]="1" [max]="9999">
+<!--      <input type="checkbox" [ngModel]="includeYear()" (ngModelChange)="includeYear.set($event)" [ngModelOptions]="{ standalone: true }">-->
     </label>
     <label>
       Only show reduced?

@@ -80,7 +80,7 @@ function euclidianGcd(a: number, b: number) {
 function* dateGenerator(year: number) {
   year |= 0;
   // just for simpler/safetier, go for noon to avoid goofy shit like leap seconds
-  const date = new Date(`${year}-01-01T12:00:00.000`);
+  const date = new Date(`${year.toString().padStart(4, '0')}-01-01T12:00:00.000`);
 
   while (date.getFullYear() === year) {
     yield date;

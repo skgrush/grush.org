@@ -1,4 +1,9 @@
 
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 section {
   display: grid;
   grid-template-columns: min-content min-content min-content;

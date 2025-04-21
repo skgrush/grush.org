@@ -14,12 +14,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class DateReducerComponent {
 
-  readonly includeYear = signal(false);
   readonly format = signal(DateReducerFormat.ISO);
   readonly onlyShowReduced = signal(false);
+  readonly year = signal<number | undefined>(undefined);
+
 
   readonly dates = computed(() => {
-    const includeYear = this.includeYear();
+    const year = this.year();
     const format = this.format();
     const formatter = DateReducerComponent.slashFormatter;
     // const formatter =
@@ -27,7 +28,7 @@ export class DateReducerComponent {
     //     ? DateReducerComponent.isoFormatter
     //     : DateReducerComponent.slashFormatter;
 
-    const unformattedPairs = [...dateReducer(format, includeYear)];
+    const unformattedPairs = [...dateReducer(format, year)];
 
     const formattedPairs = unformattedPairs
       .map(({ dateParts, gcd, reducedParts, date }) =>
@@ -40,6 +41,19 @@ export class DateReducerComponent {
 
     return formattedPairs;
   });
+
+  yearChanged(event: Event) {
+    const target = event.target;
+    if (!(target instanceof HTMLInputElement)) {
+      return;
+    }
+    if (!target.validity.valid || isNaN(target.valueAsNumber)) {
+      this.year.set(undefined);
+    }
+    else {
+      this.year.set(target.valueAsNumber);
+    }
+  }
 
   private static isoFormatter(numbers: readonly number[]): string {
     return numbers.map(n => n.toString().padStart(2, '0')).join('-');
