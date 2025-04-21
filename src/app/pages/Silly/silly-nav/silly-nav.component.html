@@ -1,0 +1,5 @@
+<ul>
+  @for (route of routes; track route.path) {
+    <li><a [routerLink]="['/Silly', route.path]" routerLinkActive="active-link">{{ route.title }}</a></li>
+  }
+</ul>
