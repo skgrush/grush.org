@@ -7,10 +7,14 @@ section {
 
 time, .gcd, .reduced {
   white-space: pre;
+  justify-self: end;
+}
+
+.row > i {
+  height: 1em;
 }
 
 .gcd {
-  justify-self: end;
   &::before {
     content: '/';
   }
