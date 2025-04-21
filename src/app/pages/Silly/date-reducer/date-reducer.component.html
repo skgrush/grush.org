@@ -1,0 +1,26 @@
+
+<h1>Reducing dates</h1>
+
+<header>
+  <form (submit)="$event.preventDefault()">
+    <label>
+      Include year?
+      <input type="checkbox" [ngModel]="includeYear()" (ngModelChange)="includeYear.set($event)" [ngModelOptions]="{ standalone: true }">
+    </label>
+<!--    <label>-->
+<!--      Format?-->
+<!--    </label>-->
+  </form>
+</header>
+
+@defer {
+  <section>
+    @for (parts of dates(); track parts.dateParts) {
+      <div class="row">
+        <time [dateTime]="parts.dateObj.toISOString()">{{ parts.dateParts }}</time>
+        <span class="gcd" [style.--gcd-score]="(parts.gcd - 1) / 11">{{ parts.gcd }}</span>
+        <span class="reduced">{{ parts.reducedParts }}</span>
+      </div>
+    }
+  </section>
+}

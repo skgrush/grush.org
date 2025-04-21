@@ -27,6 +27,10 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/app/routes'),
   },
   {
+    path: 'Silly',
+    loadChildren: () => import('./pages/Silly/routes'),
+  },
+  {
     path: 'error',
     loadComponent: () => import('./pages/error/error.component'),
   },

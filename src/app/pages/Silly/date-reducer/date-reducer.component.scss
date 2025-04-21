@@ -1,0 +1,29 @@
+
+section {
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+  column-gap: 1em;
+}
+
+time, .gcd, .reduced {
+  white-space: pre;
+}
+
+.gcd {
+  justify-self: end;
+  &::before {
+    content: '/';
+  }
+  &::after {
+    content: '=';
+  }
+
+  /* shift color from white (if gcd-score=0) to red (if gcd-score=1) on a rooted scale */
+  color: color(
+    from white display-p3 r calc((1 - var(--gcd-score)) * (1 - var(--gcd-score))) calc((1 - var(--gcd-score)) * (1 - var(--gcd-score)))
+  )
+}
+
+.row {
+  display: contents;
+}
